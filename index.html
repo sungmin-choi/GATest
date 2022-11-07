@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -80,6 +88,18 @@
       ></iframe
     ></noscript>
     <main>
+      <div>
+        <model-viewer
+          id="reveal"
+          loading="eager"
+          camera-controls
+          touch-action="pan-y"
+          auto-rotate
+          src="assets/Chair.glb"
+          shadow-intensity="1"
+          alt="A 3D model of a shishkebab"
+        ></model-viewer>
+      </div>
       <button id="button3" class="openBtn">모달창 open</button>
       <div class="modal hidden">
         <div class="bg"></div>
